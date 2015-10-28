@@ -100,15 +100,15 @@
 						<p>A lot of stuff will come back at you. We just want the latitudes and longitudes. "Add Column Based on This Column" is what we will use on the API-called field we made &mdash; and we will use it twice, once for latitude, and once for longitude. This will pull the value for lat or long out of the first record that the JSON query brought back. (And a side note: This might not be what we wanted! You will see when we try to map this data. Remember, we just wanted CT data points!) These are the two piece of code you will use to make a column for latitude and a column for longitude: <code>value.parseJson()[0].lat</code><code>value.parseJson()[0].lon</code></p>
 						<p>After that is done, collapse the column for the JSON gibberish and export the non-collapsed columns. Now we have data that we can pull into mapping tools!</p>
 						<p><img src="images/Screenshots/OpenRefine-data.png" width=90%/></p>
-						<h2>Step Three</h2>
+						<h2>Step Three: Use CartoDB to Visualize the Data</h2>
 						<p>Map it! You can make some really interesting visualizations in places like CartoDB &mdash; just sign up for an account. Here is some of the stuff that I did. Note that there are addresses represented that are not exactly in Connecticut. This happened in part because there are some towns in the data set (e.g., Los Angeles, CT) that don't exist. In other cases, the first result in the JSON query when we geocoded was not a location within Connecticut. CartoDB gives you the opportunity to create heat maps, but we can also classify the points based on image type to see what the distribution of UFO features might be.</p>
 						<p><img src="images/Screenshots/CartoDB-connecticut-obvious-data-errors.png" width=90%/></p>
 						<p><img src="images/Screenshots/CartoDB-connecticut-closeup.png" width=90%/></p>
 						<p><img src="images/Screenshots/CartoDB-classification-alt.png" width=90%/></p>
 						<p>I have also made an interactive map on CartoDB that you can look at. It is animated &mdash; we can see when the sightings happened over time! <a href="https://kayebohemier.cartodb.com/viz/66a70546-7cd4-11e5-b9b6-0e31c9be1b51/map">See the map here.</a></p>
-						<h2>Step Four</h2>
-						<p></p>
-						
+						<h2>Step Four: Use ArcGIS Online to Mash Up<br/>and Visualize the Data</h2>
+						<p>ArcGIS Online (for which you will need an account) will let you import up to a certain number of records. To compare data after uploading files to ArcGIS Online, you can find data sets that have been made available on the platform. For UFO data, we can be creative: I decided to pull down data about wetlands (e.g., swamp gas?), flight paths, and US military bases to see if there was a correlation. Of course, to do a proper analysis, this would need to go into ArcMap, where we could analyze the data points.</p>
+						<p><img src="images/Screenshots/ArcGIS-online-mashup.png" width=60%/></p>
 					</div>
 				</header>
 				<div class="content dark style2">
@@ -116,28 +116,21 @@
 						<div class="row">
 							<div class="4u 12u(narrow)">
 								<section>
-									<h3>Augue vivamus sed ipsum commodo lorem dolor</h3>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam
-									tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante
-									vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus
-									augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
-									lorem ipsum dolor placerat magna tempus feugiat.</p>
-									<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-									accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore
-									euismod lorem ipsum dolor.</p>
+									<h3>The Images</h3>
+									<p>On the right, I have collected the images generated from the Monster Mashup UFO section. Clicking on any one of them will make the images larger.</p>
 									<footer>
-										<a href="#third" class="button scrolly">Accumsan nisi tempor</a>
+										<a href="#third" class="button scrolly">To the next section ...</a>
 									</footer>
 								</section>
 							</div>
 							<div class="8u 12u(narrow)">
 								<div class="row">
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a></div>
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a></div>
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a></div>
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a></div>
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a></div>
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a></div>
+									<div class="6u"><a href="images/Screenshots/OpenRefine-data.png" class="image fit"><img src="images/Screenshots/OpenRefine-data.png" alt="" /></a></div>
+									<div class="6u"><a href="images/Screenshots/CartoDB-connecticut-obvious-data-errors.png" class="image fit"><img src="images/Screenshots/CartoDB-connecticut-obvious-data-errors.png" alt="" /></a></div>
+									<div class="6u"><a href="images/Screenshots/CartoDB-connecticut-closeup.png" class="image fit"><img src="images/Screenshots/CartoDB-connecticut-closeup.png" alt="" /></a></div>
+									<div class="6u"><a href="images/Screenshots/CartoDB-classification-alt.png" class="image fit"><img src="images/Screenshots/CartoDB-classification-alt.png" alt="" /></a></div>
+									<div class="6u"><a href="images/Screenshots/CartoDB-classification.png" class="image fit"><img src="images/Screenshots/CartoDB-classification.png" alt="" /></a></div>
+									<div class="6u"><a href="images/Screenshots/ArcGIS-online-mashup.png" class="image fit"><img src="images/Screenshots/ArcGIS-online-mashup.png" alt="" /></a></div>
 								</div>
 							</div>
 						</div>
@@ -149,57 +142,11 @@
 			<section id="third" class="main">
 				<header>
 					<div class="container">
-						<h2>Ornare varius lorem ipsum ante lectus</h2>
-						<p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
-						feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.</p>
+						<h2>Where To Get Started</h2>
+						<p>We have spent a lot of time looking at the data we used, and there are many resources that you should be aware of if you try this analysis yourself.</p>
 					</div>
 				</header>
-				<div class="content dark style3">
-					<div class="container">
-						<span class="image featured"><img src="images/pic07.jpg" alt="" /></span>
-						<div class="row">
-							<div class="4u 12u(narrow)">
-								<h3>Diam vivamus turpis lorem sodales lectus ornare</h3>
-								<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam
-								tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante
-								vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus
-								augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
-								lorem ipsum dolor placerat magna tempus feugiat.</p>
-								<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-								accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore
-								euismod lorem ipsum dolor sit amet consequat. vivamus nisi eu eget ornare varius
-								gravida dolore euismod lorem ipsum dolor sit amet consequat. vivamus nisi eu
-								eget ornare et magna.</p>
-							</div>
-							<div class="4u 12u(narrow)">
-								<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam
-								tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante
-								vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus
-								augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
-								lorem ipsum dolor placerat magna tempus feugiat.</p>
-								<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-								accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore
-								euismod lorem ipsum dolor sit amet consequat eget ornare varius gravida euismod.
-								Gravida dis lorem ipsum dolor placerat magna tempus feugiat magna tempus lorem.</p>
-								<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-								accumsan vivamus augue cubilia.</p>
-							</div>
-							<div class="4u 12u(narrow)">
-								<p>Placerat lectus ante vel nunc euismod est turpis sodales. Diam tempor dui
-								lacinia eget ornare varius gravida. Gravida dis placerat lectus ante vel nunc
-								euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus augue
-								cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
-								lorem ipsum dolor placerat magna tempus feugiat. Lectus ante vel nunc euismod
-								est turpis sodales. Diam tempor dui lacinia dolore.</p>
-								<p>Accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida
-								dolore euismod lorem ipsum dolor sit amet conseismod lorem ipsum dolor sit amet
-								consequat lorem ipsum consequat feugiat sed tempus euismod feugiat veroeros.</p>
-								<footer>
-									<a href="#fourth" class="button scrolly">Ipsum ornare lorem dolor</a>
-								</footer>
-							</div>
-						</div>
-					</div>
+				
 				</div>
 			</section>
 
@@ -378,43 +325,14 @@
 		<!-- Fourth -->
 			<section id="fourth" class="main">
 				<header>
-					<div class="container">
-						<h2>Sed feugiat ipsum consequat</h2>
-						<p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
-						feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.</p>
-					</div>
-				</header>
-				<div class="content style4 featured">
-					<div class="container 75%">
-						<form method="post" action="#">
-							<div class="row 50%">
-								<div class="6u 12u(mobile)"><input type="text" placeholder="Name" /></div>
-								<div class="6u 12u(mobile)"><input type="text" placeholder="Email" /></div>
-							</div>
-							<div class="row 50%">
-								<div class="12u"><textarea name="message" placeholder="Message"></textarea></div>
-							</div>
-							<div class="row">
-								<div class="12u">
-									<ul class="actions">
-										<li><input type="submit" class="button" value="Send Message" /></li>
-										<li><input type="reset" class="button alt" value="Clear Form" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-					</div>
 				</div>
 			</section>
 
 		<!-- Footer -->
 			<section id="footer">
 				<ul class="icons">
-					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-					<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="http://twitter.com/kayeatyalelib" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://github.com/kayebohemier" class="icon fa-github"><span class="label">GitHub</span></a></li>
 				</ul>
 				<div class="copyright">
 					<ul class="menu">
