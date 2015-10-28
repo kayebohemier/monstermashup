@@ -99,7 +99,7 @@
 						<p>Select the drop-down chevron for the combined City-State column and add a column based on this column. This is the command needed for geocoding: <code>'http://open.mapquestapi.com/nominatim/v1/search.php?' + 'key=INSERTKEYHERE&format=json&' + 'q=' + escape(value, 'url')</code></p> &mdash; because it's an API call, you will need to add a time delay of 100-200ms between each call so that you are not throttled. This is an API best practice.
 						<p>A lot of stuff will come back at you. We just want the latitudes and longitudes. "Add Column Based on This Column" is what we will use on the API-called field we made &mdash; and we will use it twice, once for latitude, and once for longitude. This will pull the value for lat or long out of the first record that the JSON query brought back. (And a side note: This might not be what we wanted! You will see when we try to map this data. Remember, we just wanted CT data points!) These are the two piece of code you will use to make a column for latitude and a column for longitude: <code>value.parseJson()[0].lat</code><code>value.parseJson()[0].lon</code></p>
 						<p>After that is done, collapse the column for the JSON gibberish and export the non-collapsed columns. Now we have data that we can pull into mapping tools!</p>
-						<p><img src="images/Screenshots/OpenRefine-data.png"/></p>
+						<p><img src="images/Screenshots/OpenRefine-data.png" width=90%/></p>
 						<h2>Step Three</h2>
 						<p></p>
 						<h2>Step Four</h2>
