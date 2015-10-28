@@ -94,8 +94,12 @@
 						And I <em>would have done that</em> if I needed to get this data analysis-ready. Los Angeles, CT, for example, does not exist. You'll notice that I never did, and that's because it's easier for me to teach from dirty data than from completely clean data.</p>
 						<h2>Step Two: Geocode Address Information</h2>
 						<p>Once you have edited the data in Excel, save it as a .csv, .tsv, or Excel workbook. I chose to save this data as an Excel workbook because OpenRefine can read Excel files, and the commas and oddities in the data set makes it risky to use commas or tabs as delimiters.</p>
-						<p></p>
-						<p></p>
+						<p>To make the data readable for geoprocessing, we need to combine the city and state fields. Select the drop-down chevron on the State Column, Choose Edit > Add Column Based on This Column, and use the formula <code>cells["City"].value + ", " + cells["State"].value</code> to combine the cities and states.</p>
+						<p>Once we have that, we can make a call to an API for geocoding. If you use the Google Maps API, you can only put your map in Google Maps &mdash; and we're not going to do that. For our purposes, we can use the OpenStreetMap MapQuest API. You will need to apply for a developer's license on the MapQuest API web site to receive a unique user key, and they will allow several thousand unique geocoding calls per month. To avoid maxing out the quota, I recommend testing on sample data sets.</p>
+						<p>Select the drop-down chevron for the combined City-State column and add a column based on this column. This is the command needed for geocoding: <code>'http://open.mapquestapi.com/nominatim/v1/search.php?' + 'key=INSERTKEYHERE&format=json&' + 'q=' + escape(value, 'url')</code></p> &mdash; because it's an API call, you will need to add a time delay of 100-200ms between each call so that you are not throttled. This is an API best practice.
+						<p>A lot of stuff will come back at you. We just want the latitudes and longitudes. "Add Column Based on This Column" is what we will use on the API-called field we made &mdash; and we will use it twice, once for latitude, and once for longitude. This will pull the value for lat or long out of the first record that the JSON query brought back. (And a side note: This might not be what we wanted! You will see when we try to map this data. Remember, we just wanted CT data points!) These are the two piece of code you will use to make a column for latitude and a column for longitude: <code>value.parseJson()[0].lat</code><code>value.parseJson()[0].lon</code></p>
+						<p>After that is done, collapse the column for the JSON gibberish and export the non-collapsed columns. Now we have data that we can pull into mapping tools!</p>
+						<p><img src="images/Screenshots/OpenRefine-data.png"/></p>
 						<h2>Step Three</h2>
 						<p></p>
 						<h2>Step Four</h2>
